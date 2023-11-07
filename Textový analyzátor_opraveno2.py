@@ -68,8 +68,7 @@ if username in users and users[username] == password:
     
         words = choice_text.split()
         titlecase_words = sum(1 for word in words if word.istitle())
-        uppercase_words = sum(1 for word in words if all(letter.isalpha() for letter in word))
-        # druhá možnost je - uppercase_words = sum(1 for word in words if all(char.isupper() for char in word))
+        uppercase_words = sum(1 for word in words if all(letter.isupper() for letter in word) and 1 for word in words if all(letter.isalpha() for letter in word))
         lowercase_words = sum(1 for word in words if word.islower())
         numeric_strings = sum(1 for word in words if word.isnumeric())
         sum_of_numbers = sum(int(word) for word in words if word.isnumeric())
